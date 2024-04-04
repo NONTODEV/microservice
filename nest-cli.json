@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/microservice/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/microservice/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/microservice",
+  "projects": {
+    "microservice": {
+      "type": "application",
+      "root": "apps/microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice/tsconfig.app.json"
+      }
+    },
+    "users-microservice": {
+      "type": "application",
+      "root": "apps/users-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-microservice/tsconfig.app.json"
+      }
+    },
+    "books-microservice": {
+      "type": "application",
+      "root": "apps/books-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/books-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/books-microservice/tsconfig.app.json"
+      }
+    },
+    "web-microservice": {
+      "type": "application",
+      "root": "apps/web-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/web-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/web-microservice/tsconfig.app.json"
+      }
+    },
+    "dashboard-microservice": {
+      "type": "application",
+      "root": "apps/dashboard-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/dashboard-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/dashboard-microservice/tsconfig.app.json"
+      }
+    },
+    "commom": {
+      "type": "library",
+      "root": "libs/commom",
+      "entryFile": "index",
+      "sourceRoot": "libs/commom/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/commom/tsconfig.lib.json"
+      }
+    }
+  }
+}
